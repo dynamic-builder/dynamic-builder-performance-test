@@ -2,12 +2,12 @@ package dynamic.builder.performance.test.basic;
 
 import com.singleton.dynamic.builder.DynamicBuilderFactory;
 
-import dynamic.builder.performance.test.basic.implemented.BasicObjectImpl;
+import dynamic.builder.performance.test.basic.initstrategy.implemented.BasicObjectImpl;
 
 public class BasicObjectPerformanceTest
 {
     private static final int WARM_UP_ITERATIONS = 10000;
-    private static final int ITERATIONS = 10000000;
+    private static final int ITERATIONS = 1000000;
 
     public static void main(String[] args)
     {
@@ -27,8 +27,7 @@ public class BasicObjectPerformanceTest
 
         System.out.println("Dynamic Total Time: " + dynamicTotalTime);
         System.out.println("Dynamic Average Time: " + dynamicTotalTime / ITERATIONS);
-        
-        
+
         // IMPLEMENTED
         for (int i = 0; i < WARM_UP_ITERATIONS; i++)
         {
@@ -46,7 +45,7 @@ public class BasicObjectPerformanceTest
         System.out.println("Implemented Total Time: " + implementedTotalTime);
         System.out.println("Implemented Average Time: " + implementedTotalTime / ITERATIONS);
     }
-    
+
     private static void performImplementedBuilderTest()
     {
         BasicBuilder builder = initImplementedBuilder();

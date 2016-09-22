@@ -1,4 +1,4 @@
-package dynamic.builder.performance.test.basic.implemented;
+package dynamic.builder.performance.test.basic.initstrategy.implemented;
 
 import dynamic.builder.performance.test.basic.BasicBuilder;
 import dynamic.builder.performance.test.basic.BasicObject;
